@@ -7,6 +7,8 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
 
+
+
 /**
  * Représente un produit dans le système.
  * Cette classe est une entité JPA et est mappée à une table en base de données.

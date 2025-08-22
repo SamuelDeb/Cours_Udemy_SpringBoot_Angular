@@ -6,7 +6,7 @@ import fr.sd.produits.entities.Categorie;
 import fr.sd.produits.entities.Produit;
 
 public interface ProduitService {
-	
+
 	 Produit saveProduit(Produit p);
 	 Produit updateProduit(Produit p);
 	 void deleteProduit(Produit p);

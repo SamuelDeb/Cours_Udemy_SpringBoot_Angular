@@ -10,9 +10,11 @@ import fr.sd.produits.entities.Categorie;
 import fr.sd.produits.entities.Produit;
 
 public interface ProduitRepository extends JpaRepository<Produit, Long> {
-	List<Produit> findByNomProduit(String nom);
+
+    List<Produit> findByNomProduit(String nom);
 	List<Produit> findByNomProduitContains(String nom);   
-	
+
+
 	@Query("select p from Produit p where p.nomProduit like %:nom and p.prixProduit > :prix")
 	List<Produit> findByNomPrix (@Param("nom") String nom,@Param("prix") Double prix);
     

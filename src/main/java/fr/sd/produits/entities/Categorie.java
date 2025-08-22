@@ -16,14 +16,23 @@ import lombok.NoArgsConstructor;
 
 @Entity
 public class Categorie {
+
+    /**
+     * Identifiant unique de la catégorie.
+     * Généré automatiquement par la base de données.
+     */
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long idCat;
 	private String nomCat;
 	private String descriptionCat;
-	
+
+     /**
+     * Liste des produits associés à cette catégorie.
+     */
 	@OneToMany(mappedBy = "categorie")
 	private List<Produit> produits;
+
 
 	public void setIdCat(long l) {
 		// TODO Auto-generated method stub
